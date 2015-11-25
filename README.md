@@ -23,7 +23,7 @@ In this project I'm testing a web-based application that reads RSS feeds.
 **Additional tests:**
 * *The menu test suite*
  *  Test that we have menu items.
- *  Test that the menu items has name and it is longer than 3 character.
+ *  Test that the menu items has name and it is at least 3 characters long.
  *  Test to ensure menu items not repeted.
 
 ### Sources used for this project
