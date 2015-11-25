@@ -28,7 +28,7 @@ In this project I'm testing a web-based application that reads RSS feeds.
 
 ### Sources used for this project
 * [Jasmine](http://jasmine.github.io/2.0/introduction.html)
-* <HTML[GOODIES]/>(http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html)
+* [*<HTML*GOODIES/>](http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html)
 * [w3schools](http://www.w3schools.com)
 * [Udacity JavaScript Testing](https://www.youtube.com/watch?v=82iDVtbr7cY&list=PLAwxTw4SYaPkv4LG-0UHNfhPkKPfYacOg)
 
