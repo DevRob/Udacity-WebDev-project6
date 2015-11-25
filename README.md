@@ -2,7 +2,8 @@
 
 ### Project Overview
 
-In this project I'm testing a web-based application that reads RSS feeds. 
+In this project I'm testing a web-based application that reads RSS feeds.
+For this I need to edit the [feedreader.js](https://github.com/DevRob/Udacity-WebDev-project6/blob/master/jasmine/spec/feedreader.js) file.
 [Link to project demo:](http://devrob.github.io/Udacity-WebDev-project6)
 
 **Base tests required:**
