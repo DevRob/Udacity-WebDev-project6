@@ -3,7 +3,7 @@
 ### Project Overview
 
 In this project I'm testing a web-based application that reads RSS feeds. 
-[Link to project demo:](https://github.com/DevRob/Udacity-WebDev-project6)
+[Link to project demo:](http://devrob.github.io/Udacity-WebDev-project6)
 
 **Base tests required:**
 * *RSS Feeds test suite*
