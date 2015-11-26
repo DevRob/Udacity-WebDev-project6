@@ -34,4 +34,5 @@ For this I need to edit the [feedreader.js](https://github.com/DevRob/Udacity-We
 * [*<HTML*GOODIES/>](http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html)
 * [w3schools](http://www.w3schools.com)
 * [Udacity JavaScript Testing](https://www.youtube.com/watch?v=82iDVtbr7cY&list=PLAwxTw4SYaPkv4LG-0UHNfhPkKPfYacOg)
+* [underscore.js](http://underscorejs.org/)
 
