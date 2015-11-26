@@ -95,8 +95,8 @@ $(function() {
       describe('Menu items', function() {
         var menuItems = [];
 
-        for (var idx = 0; idx < $('.feed-list a').length; idx++) {
-          menuItems.push($('.feed-list a')[idx]);
+        for (var i = 0, len = $('.feed-list a').length; i < len; i++) {
+          menuItems.push($('.feed-list a')[i]);
         }
 
         /**
@@ -119,29 +119,28 @@ $(function() {
         });
 
         /**
-        * Test to ensure menu items not repeted
+        * Test to ensure menu items not repeted using underscore
+        *    _.contains() to check if item is in list.
         */
         it('has not been repeted', function() {
-          var checkList = [];
-          var checkItem = {};
-          menuItems.forEach(function(item) {
-            checkList.push(item);
-          });
+          var item = null;
 
-          for (var idx = 0; idx < checkList.length + 1; idx++ ) {
-            checkItem = checkList.pop();
-            checkList.forEach(function(item) {
-              expect(checkItem).not.toBe(item);
-            });
+          for (var i = 0, len = menuItems.length; i < len + 1; i++ ) {
+            item = menuItems.pop();
+            expect(_.contains(menuItems, item)).toBeFalsy();
           }
         });
       });
     });
 
+     /**
+      * The feedElement is outside the describe block,
+      *     because I use it in the "New Feed Selection" as well.
+      */
+    var feedElement = $('.feed');
     /**
      * Test suite named "Initial Entries"
      */
-    var feedElement = $('.feed');
     describe('Initial Entries', function() {
 
       /**
@@ -156,9 +155,8 @@ $(function() {
        * Test that there is at least a single .entry element
        *    within the .feed container.
        */
-      it('loadFeed completed.', function(done) {
+      it('loadFeed completed.', function() {
         expect(feedElement.children().length).toBeGreaterThan(0);
-        done();
       });
     });
 
@@ -166,29 +164,27 @@ $(function() {
      * Test suite named "New Feed Selection"
      */
      describe('New Feed Selection', function() {
-       var entryStore;
+       var entryStore = null;
 
        /**
-        * Store initial content than calls loadFeed()
+        * Store initial content than calls loadFeed() again
+        *    with a different id
         */
        beforeEach(function(done) {
-         entryStore = feedElement.find('h2').text();
-         loadFeed(1, done);
+         loadFeed(0, function() {
+           entryStore = feedElement.find('h2').text();
+           loadFeed(1, function () {
+             done();
+           });
+         });
        });
 
        /**
-       * Test to check that content is changed upon new feed loaded.
-       */
-       it('Content changes after new feed loaded', function(done) {
-        expect(feedElement.find('h2').text()).not.toBe(entryStore);
-        done();
-      });
-
-       /**
-        * Return to initial feed when completed.
+        * Test to check that content is changed upon new feed loaded.
         */
-      afterEach(function(done) {
-        loadFeed(1, done);
-      });
+       it('Content changes after new feed loaded', function(done) {
+          expect(feedElement.find('h2').text()).not.toBe(entryStore);
+          done();
+       });
      });
 }());
