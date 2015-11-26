@@ -1,6 +1,6 @@
-## Feedreader testing with jasmine
+### Feedreader testing with jasmine
 
-### Project Overview
+**Project Overview**
 
 In this project I'm testing a web-based application that reads RSS feeds.
 
